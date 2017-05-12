@@ -135,7 +135,7 @@
       .attr('fill', d => d.num >= 200 ? 'red' : 'blue') //you can use a function and the parameters are the same as the callback functions in .map and .filter
       .attr('stroke', '#fff');
 
-// ******** UPDATE DATA BUTTON ******** // 
+// ******** UPDATE DATA FUNCTION FOR UPDATE DATA BUTTON ******** // 
 
     function updateData() {
 
