@@ -103,7 +103,7 @@
 
     var svg = d3.select('svg')
 
-    svg.selectAll('rect')
+    var rect = svg.selectAll('rect')
       .data(data)
       .enter().append('rect')
       .attr('width', 25)
@@ -112,12 +112,13 @@
       .attr('y', height)
       .attr('fill', 'yellow')
 
+
 // ******** CALL AXIS' ******** // 
 
     svg.append('g') //g element is a group element that acts as a container for multiple items
       //.attr('transform', 'translate(40, 20)') //the translate is 40 from the left and 20 pixels from the top
       .attr('transform', 'translate(' + [margin.left, 0] + ')')
-      .attr("class", "y axis")
+      .attr("class", "yAxis")
       .call(yAxis)
 
     svg.append('g')
@@ -154,7 +155,7 @@
 
 // ******** TRANSITIONS WITH NEW DATA ******** // 
 
-      svg.select('.y.axis')
+      svg.select('.yAxis')
         .transition()
         .duration(1500)
         .call(yAxis)
