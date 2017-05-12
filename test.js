@@ -73,8 +73,9 @@
       .call(yAxis)
 
     svg.append('g')
-      .attr('transform', 'translate(' + [0, height - margin.bottom] + ')')
+      .attr('transform', 'translate(' + [12, height - margin.bottom + 39] + ')')
       .call(xAxis)
+
 
 
 
